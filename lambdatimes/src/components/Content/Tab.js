@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Tab = props => {
+class Tab extends React.Component {
+  constructor(props) {
+    super(props);
+    this.tab = this.tab.bind(this);
+  }
   let className = 'tab';
   if (props.tab === props.selectedTab) {
     className += ' menu-active';
@@ -8,17 +12,24 @@ const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
       if they match, the className should be: 'tab active-tab',
       if it is not it should just be 'tab'*/
-  return (
-    <div
-      className={className}
-      onClick={() => {
-        /* Replace this dummy click handler function with your selectTabHandler function from props
-         you'll need to pass the `tab` in as an argument to this handler. */
-      }}
-    >
-      {props.tab.toUpperCase()}
-    </div>
-  );
+
+  selectTabHandler(e) {
+    e.preventDefault();
+
+  };
+
+  render() {
+    return (
+      <div
+        className={className}
+        onClick={selectTabHandler}
+          /* Replace this dummy click handler function with your selectTabHandler function from props
+           you'll need to pass the `tab` in as an argument to this handler. */
+      >
+        {props.tab.toUpperCase()}
+      </div>
+    )
+  };
 };
 
 // Make sure you include PropTypes on your props.
