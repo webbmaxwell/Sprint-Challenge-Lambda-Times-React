@@ -31,9 +31,23 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes are used to make sure that only a certain data-type is permitted to be passed in as props.
+
 - [ ] Describe a life-cycle event in React?
+
+A life-cycle event will be executed after the component is rendered and is useful if you need to build an app and don't have the data yet.
+
 - [ ] Explain the details of a Higher Order Component?
+
+Higher Order Components are similar to nesting in other programming languages. They are a way to connect components with similar behaviors to one another.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+The first way to style components in React is to import a CSS file. This is useful for when you have time to style everything just how you want it.
+The second is to import Reactstrap and use the styles they have there, which is good for when you need to build something quickly and don't have a lot of time to focus on the styling.
+The third way is to use the 'styled-components' library, which utilizes a combination of the Reactstrap functionality with Higher Order Components to add even more customization to the usefulness.
+
 
 ## Project Setup
 
