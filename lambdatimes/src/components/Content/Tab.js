@@ -3,11 +3,11 @@ import React from 'react';
 class Tab extends React.Component {
   constructor(props) {
     super(props);
-    this.tab = this.tab.bind(this);
   }
-  let className = 'tab';
+
+  let classN = 'tab';
   if (props.tab === props.selectedTab) {
-    className += ' menu-active';
+    classN += ' menu-active';
   };
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop,
       if they match, the className should be: 'tab active-tab',
@@ -21,7 +21,7 @@ class Tab extends React.Component {
   render() {
     return (
       <div
-        className={className}
+        className={classN}
         onClick={selectTabHandler}
           /* Replace this dummy click handler function with your selectTabHandler function from props
            you'll need to pass the `tab` in as an argument to this handler. */
